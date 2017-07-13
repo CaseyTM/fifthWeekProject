@@ -5,18 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<div class="word-goes-here">
-	The current word is {{currentWord}}
-	</div>
-	<div class="wrong guesses">
-	Your incorrect guesses are: {{#incorrectGuesses}} {{.}} {{/incorrectGuesses}}
-	</div>
+	<div class="display">
+	{{#underscore}}
+		<p class="letter">{{.}}</p>
+	{{/underscore}}
+</div>
 	<div class="remainingGuesses">
-	You have {{remainingGuesses}} remaining Guesses!
+	You have {{guesses}} remaining Guesses!
+	your guesses so far are {{#allLetters}}{{.}}{{/allLetters}}
 	</div>
 	<form  action="/" method="post">
 		<select name="selectedLetter">
-		  <option value="a">A</option> 
+		  <option value="a">A</option>
 		  <option value="b">B</option>
 		  <option value="c">C</option>
 		  <option value="d">D</option>
@@ -45,7 +45,5 @@
 		</select>
 		<input type="submit" name="guessTracker" value="Make a Guess!">
 	</form>
-	<div class="mystery-word">
-	</div>
 </body>
 </html>

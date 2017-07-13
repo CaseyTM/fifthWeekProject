@@ -1,0 +1,9 @@
+.display{
+  display:flex;
+}
+.mystery-word{
+  background-color: red;
+}
+.letter{
+  margin-right:20px;
+}
